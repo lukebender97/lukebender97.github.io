@@ -11791,9 +11791,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3> Introduction </h3><p>Video games became wildly popular with arcade machines, but as technology progressed, home consoles were created, too. Before long, they had become a major factor in the electronic entertainment market. Since the 1970s, video games have become more and more popular, and &lt;a href = "<a href="https://venturebeat.com/2016/04/21/video-games-will-become-a-99-6b-industry-this-year-as-mobile-overtakes-consoles-and-pcs/"&gt;">https://venturebeat.com/2016/04/21/video-games-will-become-a-99-6b-industry-this-year-as-mobile-overtakes-consoles-and-pcs/"&gt;</a> the global video game market is expected to have a value of over $100 billion by 2019&lt;/a&gt;. I myself am a big fan of video games, but I also love to learn about their history and how the &lt;a href = "<a href="https://en.wikipedia.org/wiki/Video_game_industry"&gt;">https://en.wikipedia.org/wiki/Video_game_industry"&gt;</a> video game industry&lt;/a&gt; operates.</p>
-<p>Because video games have become such a huge market, marketing is critical to appeal to the right audience and to understand trends in people's interests in certain types of games. Because sales data is made public, not only can I analyze which games and systems have been most popular, but I can also notice trends into which genres will have a higher appeal in the future or into which companies might not be making as many popular games as they used to. If I were working for a video game company, I could use these data science techniques to help my company understand where the industry is headed and how we might be able to profit off of that. Of course, if that were my full-time job, I would also look at social media data to better grasp what people would like in games nowadays. However, for this project, I am only going to be looking at video game sales data.</p>
+<html>
+<h3> Introduction </h3>
+<br/>
+Video games became wildly popular with arcade machines, but as technology progressed, home consoles were created, too. Before long, they had become a major factor in the electronic entertainment market. Since the 1970s, video games have become more and more popular, and <a href = "https://venturebeat.com/2016/04/21/video-games-will-become-a-99-6b-industry-this-year-as-mobile-overtakes-consoles-and-pcs/"> the global video game market is expected to have a value of over 100 billion USD by 2019</a>. I myself am a big fan of video games, but I also love to learn about their history and how the <a href = "https://en.wikipedia.org/wiki/Video_game_industry"> video game industry</a> operates. 
 
+Because video games have become such a huge market, marketing is critical to appeal to the right audience and to understand trends in people's interests in certain types of games. Because sales data is made public, not only can I analyze which games and systems have been most popular, but I can also notice trends into which genres will have a higher appeal in the future or into which companies might not be making as many popular games as they used to. If I were working for a video game company, I could use these data science techniques to help my company understand where the industry is headed and how we might be able to profit off of that. Of course, if that were my full-time job, I would also look at social media data to better grasp what people would like in games nowadays. However, for this project, I am only going to be looking at video game sales data.
+</html>
 </div>
 </div>
 </div>
@@ -11802,8 +11806,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This data is collected from the Kaggle dataset at <a href="https://www.kaggle.com/gregorut/videogamesales">https://www.kaggle.com/gregorut/videogamesales</a>, where the data is in a csv file, 'vgsales.csv'. On the user's page, he states that he used BeautifulSoup to scrape the data himself from <a href="http://www.vgchartz.com">http://www.vgchartz.com</a>, a database for video game hardware and software sales (this project will just be looking at software). The actual webpage for total software sales used for this project is at <a href="http://www.vgchartz.com/gamedb/">http://www.vgchartz.com/gamedb/</a>. According to the Kaggle user's page, this dataset is current as of 10/26/16, so any games released since then, including Nintendo Switch games, are not covered. Additionally, the user states that this dataset contains all listed games that have sold at least 100,000 copies, of which there are 16,598.</p>
-
+<html>
+This data is collected from the Kaggle dataset at https://www.kaggle.com/gregorut/videogamesales, where the data is in a csv file, 'vgsales.csv'. On the user's page, he states that he used BeautifulSoup to scrape the data himself from http://www.vgchartz.com, a database for video game hardware and software sales (this project will just be looking at software). The actual webpage for total software sales used for this project is at http://www.vgchartz.com/gamedb/. According to the Kaggle user's page, this dataset is current as of 10/26/16, so any games released since then, including Nintendo Switch games, are not covered. Additionally, the user states that this dataset contains all listed games that have sold at least 100,000 copies, of which there are 16,598.
+</html>
 </div>
 </div>
 </div>
@@ -11812,14 +11817,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Before I begin, I must import any important libraries. &lt;a href = "<a href="https://pandas.pydata.org/"&gt;">https://pandas.pydata.org/"&gt;</a> Pandas&lt;/a&gt; is the main framework for storing and manipulating data in Python. &lt;a href = "<a href="http://www.numpy.org/"&gt;">http://www.numpy.org/"&gt;</a> Numpy&lt;/a&gt; is a strong mathematical tool for scientific operations in Python. &lt;a href = "<a href="https://matplotlib.org/"&gt;">https://matplotlib.org/"&gt;</a> Matplotlib&lt;/a&gt; is a library used to make plots in Python to help visualize your data. &lt;a href = "<a href="http://scikit-learn.org/stable/"&gt;">http://scikit-learn.org/stable/"&gt;</a> Sklearn&lt;/a&gt; is a machine learning tool capable of power regression analysis.</p>
-
+<html>
+Before I begin, I must import any important libraries. <a href = "https://pandas.pydata.org/"> Pandas</a> is the main framework for storing and manipulating data in Python. <a href = "http://www.numpy.org/"> Numpy</a> is a strong mathematical tool for scientific operations in Python. <a href = "https://matplotlib.org/"> Matplotlib</a> is a library used to make plots in Python to help visualize your data. <a href = "http://scikit-learn.org/stable/"> Sklearn</a> is a machine learning tool capable of power regression analysis.
+</html>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11838,8 +11844,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This project was completed using a &lt;a href = "<a href="http://jupyter.org/"&gt;">http://jupyter.org/"&gt;</a> Jupyter Notebook&lt;/a&gt; as part of Anaconda. You can download Anaconda at <a href="https://www.continuum.io">https://www.continuum.io</a>, which comes packaged with the required libraries. The programming was done in Python 3. If you are viewing this from a GitHub URL, you can view it in a &lt;a href = "<a href="https://nbviewer.jupyter.org/"&gt;">https://nbviewer.jupyter.org/"&gt;</a> Jupyter NBViewer&lt;/a&gt;.</p>
-
+<html>
+This project was completed using a <a href = "http://jupyter.org/"> Jupyter Notebook</a> as part of Anaconda. You can download Anaconda at https://www.continuum.io, which comes packaged with the required libraries. The programming was done in Python 3. If you are viewing this from a GitHub URL, you can view it in a <a href = "https://nbviewer.jupyter.org/"> Jupyter NBViewer</a>.
+</html>
 </div>
 </div>
 </div>
@@ -11848,8 +11855,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3> Collecting the Data </h3><p>To start, first I must download the csv file from the website, move it to the same file as this Jupyter Notebook, and then read it into a Pandas &lt;a href = "<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html"&gt;">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html"&gt;</a> DataFrame&lt;/a&gt;.</p>
-
+<html>
+<h3> Collecting the Data </h3>
+<br/>
+To start, first I must download the csv file from the website, move it to the same file as this Jupyter Notebook, and then read it into a Pandas <a href = "https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html"> DataFrame</a>.
+</html>
 </div>
 </div>
 </div>
@@ -11993,7 +12003,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I immeadiately observe a few things from just these 5 data points:</p>
+<html>
+I immeadiately observe a few things from just these 5 data points:
 <ol>
     <li> This dataset is ordered with the highest global sales first. </li>
     <li> Nintendo has made many of the most popular games of all time, with the Wii being especially popular. </li>
@@ -12001,6 +12012,7 @@ div#notebook {
     <li> The sales are given in millions of units. </li>
     <li> These are sales numbers for a game on an individaul platform (I verified this myself by checking the data). For example, <a href = "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"> Grand Theft Auto V</a> for XBox 360 is a different data point and has different sales numbers from Grand Theft Auto V for PS3. </li>
 </ol>
+</html>
 </div>
 </div>
 </div>
@@ -12011,9 +12023,11 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <html>
     <h3> Tidying the Data </h3>
-</html><p>Thankfully the person who scraped the data from the website did a great job to make sure that this data is already quite tidy and readily available for analysis. However, I still want to perform my own check to tidy the data to a form that I prefer. First, I want to create individual lists of all platforms, genres, and years to get a better understanding of what data I have and what needs to be fixed. For better readability, I will also sort these lists.</p>
-<p>To access each row of a Pandas DataFrame, you the &lt;a href = "<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.iterrows.html"&gt;">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.iterrows.html"&gt;</a> iterrows()&lt;/a&gt; function, which returns an iterrable of each row. Each row is a tuple of the index and the series containg the rest of the information, which you can access with row[1]. A Pandas &lt;a href = "<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html"&gt;">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html"&gt;</a> Series&lt;/a&gt; is an array-like data structure that has specific values for each column in the DataFrame. You can see the following code on how to access data from a DataFrame. The append() function is a list function to place the given value at the end of a list (i.e., if you're list = [5,2], and you call append(-4), you get [5,2,-4]).</p>
 
+Thankfully the person who scraped the data from the website did a great job to make sure that this data is already quite tidy and readily available for analysis. However, I still want to perform my own check to tidy the data to a form that I prefer. First, I want to create individual lists of all platforms, genres, and years to get a better understanding of what data I have and what needs to be fixed. For better readability, I will also sort these lists. 
+
+To access each row of a Pandas DataFrame, you the <a href = "https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.iterrows.html"> iterrows()</a> function, which returns an iterrable of each row. Each row is a tuple of the index and the series containg the rest of the information, which you can access with row[1]. A Pandas <a href = "https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html"> Series</a> is an array-like data structure that has specific values for each column in the DataFrame. You can see the following code on how to access data from a DataFrame. The append() function is a list function to place the given value at the end of a list (i.e., if you're list = [5,2], and you call append(-4), you get [5,2,-4]).
+</html>
 </div>
 </div>
 </div>
@@ -12056,8 +12070,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now I first want to see all platforms represented in dataset. If you are unaware, the platform is the system or console on which that the video game is played. Because of constantly improving technology and a strong desire for the most up to date graphics, companies tend to have consoles run on a life cycle before moving onto the next one. The general life cycle of a video game console is generally around 5-7 years but depends on the technology and popularity of the console. See <a href="http://wololo.net/2015/10/27/life-cycle-console/"> this article</a> for more information about the life cycles of the major systems over the past 30 years.</p>
-
+<html>
+Now I first want to see all platforms represented in dataset. If you are unaware, the platform is the system or console on which that the video game is played. Because of constantly improving technology and a strong desire for the most up to date graphics, companies tend to have consoles run on a life cycle before moving onto the next one. The general life cycle of a video game console is generally around 5-7 years but depends on the technology and popularity of the console. See <a href="http://wololo.net/2015/10/27/life-cycle-console/"> this article</a> for more information about the life cycles of the major systems over the past 30 years.
+</html>
 </div>
 </div>
 </div>
@@ -12095,7 +12110,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are 31 platforms in this list, and I will refer to them by their abbreaviations for this project. But for the sake of completion, the abbreviations correspond to:</p>
+<html>
+There are 31 platforms in this list, and I will refer to them by their abbreaviations for this project. But for the sake of completion, the abbreviations correspond to:
 <ul>
    <li> NES - <a href = "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System"> Nintendo Entertainment System </a> </li>
    <li> SNES - <a href = "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System"> Super Nintendo Entertainment System </a> </li>
@@ -12128,9 +12144,12 @@ div#notebook {
    <li> TG16 - <a href = "https://en.wikipedia.org/wiki/TurboGrafx-16"> TurboGrafx-16 </a> </li>
    <li> PCFX - <a href = "https://en.wikipedia.org/wiki/PC-FX"> PC-FX </a> </li>
    <li> 3DO - <a href = "https://en.wikipedia.org/wiki/3DO_Interactive_Multiplayer"> 3DO Interactive Multiplayer </a> </li>
-</ul><p>Some of the latter ones I actually didn't know about and had to look up, as they were mainly only successful in Japan and only have a handful of games in the dataset. I also linked to the Wikipedia articles for these lesser known consoles if you want to read more; they're pretty interesting to learn about. The 3DO was apparently &lt;a href = "<a href="http://content.time.com/time/magazine/article/0,9171,1125840,00.html"&gt;">http://content.time.com/time/magazine/article/0,9171,1125840,00.html"&gt;</a> TIME Magazine's 1993 Product of the Year&lt;/a&gt;, and the TG16, which was known internationally (and also much more successful internationally) as the PC Engine, was succeeded by the PCFX, which was later discontinued.</p>
-<p>Here I also look at the genres:</p>
+</ul>
 
+Some of the latter ones I actually didn't know about and had to look up, as they were mainly only successful in Japan and only have a handful of games in the dataset. I also linked to the Wikipedia articles for these lesser known consoles if you want to read more; they're pretty interesting to learn about. The 3DO was apparently <a href = "http://content.time.com/time/magazine/article/0,9171,1125840,00.html"> TIME Magazine's 1993 Product of the Year</a>, and the TG16, which was known internationally (and also much more successful internationally) as the PC Engine, was succeeded by the PCFX, which was later discontinued.
+
+Here I also look at the genres:
+</html>
 </div>
 </div>
 </div>
@@ -12431,8 +12450,9 @@ Name: 16438, dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It turns out, quite a few of these games sold over a million copies, so perhaps these games just don't have their year in the dataset. My next idea was to check the first item in the dataset and actually look it up in the <a href="http://www.vgchartz.com/gamedb/"> original dataset</a>.</p>
-
+<html>
+It turns out, quite a few of these games sold over a million copies, so perhaps these games just don't have their year in the dataset. My next idea was to check the first item in the dataset and actually look it up in the <a href="http://www.vgchartz.com/gamedb/"> original dataset</a>.  
+</html>
 </div>
 </div>
 </div>
@@ -12484,8 +12504,9 @@ Name: 179, dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When I go into the webpage now (Decemeber 15, 2017), Madden NFL 2004 for the PS2 has moved down to rank 191, and its year is listed as N/A. According to its &lt;a href = "<a href="https://en.wikipedia.org/wiki/Madden_NFL_2004"&gt;">https://en.wikipedia.org/wiki/Madden_NFL_2004"&gt;</a> Wikipedia article&lt;/a&gt;, this game was released in 2003 (in all regions, too), so I guess there was just an issue with the original data colletion.</p>
-
+<html>
+When I go into the webpage now (Decemeber 15, 2017), Madden NFL 2004 for the PS2 has moved down to rank 191, and its year is listed as N/A. According to its <a href = "https://en.wikipedia.org/wiki/Madden_NFL_2004"> Wikipedia article</a>, this game was released in 2003 (in all regions, too), so I guess there was just an issue with the original data colletion.
+</html>
 </div>
 </div>
 </div>
@@ -12506,9 +12527,12 @@ Name: 179, dtype: object
 <div class="text_cell_render border-box-sizing rendered_html">
 <html>
     <h3> Exploratory Data Analysis </h3>
-</html><p>Now I want to do some initial analysis of the data to understand general trends and just learn more about the data. My first thought was to examine total global sales of all games per year.</p>
-<p>Here I will be using the Matplotlib plot() function to plot the global sales over time. The plot function takes two lists as parameters, the x values and the y values. I create a hash with the keys being all the valid years and the values are the global sales for that year. Then, when I call the the plot function, I have to cast the keys and values to lists. You can see how to create a line graph in Matplotlib &lt;a href = "<a href="https://matplotlib.org/2.0.2/users/pyplot_tutorial.html"&gt;">https://matplotlib.org/2.0.2/users/pyplot_tutorial.html"&gt;</a> here&lt;/a&gt;.</p>
+<br/>
 
+Now I want to do some initial analysis of the data to understand general trends and just learn more about the data. My first thought was to examine total global sales of all games per year. 
+
+Here I will be using the Matplotlib plot() function to plot the global sales over time. The plot function takes two lists as parameters, the x values and the y values. I create a hash with the keys being all the valid years and the values are the global sales for that year. Then, when I call the the plot function, I have to cast the keys and values to lists. You can see how to create a line graph in Matplotlib <a href = "https://matplotlib.org/2.0.2/users/pyplot_tutorial.html"> here</a>.
+</html>
 </div>
 </div>
 </div>
@@ -12882,8 +12906,9 @@ and the standard deviation is: 208.330158108
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From this graph, I notice a few important trends that I can try to explain. First, from 1980 - 1995, there is a slow but noticeable increase in overall sales of games as they started to become popular. However, around 1995, the 3D revolution hit gaming. Home consoles were released with revolutionary 3D graphics, and it is clear that this sparked a huge increase in interest in games. It also helps that this period included a large number of highly regarded games, such as &lt;a href = "<a href="https://en.wikipedia.org/wiki/Final_Fantasy_VII"&gt;">https://en.wikipedia.org/wiki/Final_Fantasy_VII"&gt;</a> Final Fantasy VII&lt;/a&gt; and &lt;a href = "<a href="https://en.wikipedia.org/wiki/Super_Mario_64"&gt;">https://en.wikipedia.org/wiki/Super_Mario_64"&gt;</a> Super Mario 64&lt;/a&gt;, which were notorious as being "system sellers". Interest in gaming clearly continues to exponenetially climb until the mid-2000s, where it peaks. This is most likely due to a larger appeal to the "casual gamer" with the Nintendo Wii being a huge success.</p>
-
+<html>
+From this graph, I notice a few important trends that I can try to explain. First, from 1980 - 1995, there is a slow but noticeable increase in overall sales of games as they started to become popular. However, around 1995, the 3D revolution hit gaming. Home consoles were released with revolutionary 3D graphics, and it is clear that this sparked a huge increase in interest in games. It also helps that this period included a large number of highly regarded games, such as <a href = "https://en.wikipedia.org/wiki/Final_Fantasy_VII"> Final Fantasy VII</a> and <a href = "https://en.wikipedia.org/wiki/Super_Mario_64"> Super Mario 64</a>, which were notorious as being "system sellers". Interest in gaming clearly continues to exponenetially climb until the mid-2000s, where it peaks. This is most likely due to a larger appeal to the "casual gamer" with the Nintendo Wii being a huge success. 
+</html>
 </div>
 </div>
 </div>
@@ -13096,8 +13121,9 @@ and the standard deviation is: 208.330158108
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Out of the top 10 best selling games of all time, 5 are on the Wii (&lt;a href = "<a href="https://en.wikipedia.org/wiki/Wii_Sports"&gt;Wii">https://en.wikipedia.org/wiki/Wii_Sports"&gt;Wii</a> Sports&lt;/a&gt; did come packaged with the Wii, which explains why its the best selling game on an individual platform ever). Evidently, this success was unsustainable as the interest fell back to numbers before the Wii was released. The large drop-off at the end, however, is misleading. These are only sales numbers as of 10/26/16, and many games haven't sold nearly as many as they will after a few years, so it's probably only safe to analyze up to the end of 2015.</p>
-
+<html>
+Out of the top 10 best selling games of all time, 5 are on the Wii (<a href = "https://en.wikipedia.org/wiki/Wii_Sports">Wii Sports</a> did come packaged with the Wii, which explains why its the best selling game on an individual platform ever). Evidently, this success was unsustainable as the interest fell back to numbers before the Wii was released. The large drop-off at the end, however, is misleading. These are only sales numbers as of 10/26/16, and many games haven't sold nearly as many as they will after a few years, so it's probably only safe to analyze up to the end of 2015. 
+</html>
 </div>
 </div>
 </div>
@@ -13625,8 +13651,9 @@ e7HmIl2M1X2zCtiENZ+BUhlDh2UqpVSO0C4dpZTKEZrwlVIqR2jCV0qpHKEJXymlcoQmfKWUyhGa
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This graph is very interesting to me. Once gaming became more popular, many new companies entered the market, and many new games were created. Because not every game can't do amazingly well, the sheer amount of games brings the average down. I am surprised by the how even/flat the graph is for the last 20 years, especially during the Wii era. There were many games that sold a very large amount, but that lead to a lot of new, uninspiring games created to profit off the new success (known as &lt;a href = "<a href="https://en.wikipedia.org/wiki/Shovelware"&gt;">https://en.wikipedia.org/wiki/Shovelware"&gt;</a> shovelware&lt;/a&gt;). The Wii is &lt;a href = "<a href="http://www.gameinformer.com/b/news/archive/2009/09/27/feature-wii-software-problem-shovelware.aspx"&gt;">http://www.gameinformer.com/b/news/archive/2009/09/27/feature-wii-software-problem-shovelware.aspx"&gt;</a> well-documented&lt;/a&gt; for having many shovelware games to take advantage of the Wii's success. A &lt;a href = "<a href="http://nintendoage.com/forum/messageview.cfm?StartRow=1&amp;catid=5&amp;threadid=170644"&gt;">http://nintendoage.com/forum/messageview.cfm?StartRow=1&amp;catid=5&amp;threadid=170644"&gt;</a> user on a Nintendo forum&lt;/a&gt; even collected every Wii game ever released, most of which was shovelware. I am very surprised by how the average stays consistent over this time period, but I guess that is a testament to how popular gaming has become.</p>
-
+<html>
+This graph is very interesting to me. Once gaming became more popular, many new companies entered the market, and many new games were created. Because not every game can't do amazingly well, the sheer amount of games brings the average down. I am surprised by the how even/flat the graph is for the last 20 years, especially during the Wii era. There were many games that sold a very large amount, but that lead to a lot of new, uninspiring games created to profit off the new success (known as <a href = "https://en.wikipedia.org/wiki/Shovelware"> shovelware</a>). The Wii is <a href = "http://www.gameinformer.com/b/news/archive/2009/09/27/feature-wii-software-problem-shovelware.aspx"> well-documented</a> for having many shovelware games to take advantage of the Wii's success. A <a href = "http://nintendoage.com/forum/messageview.cfm?StartRow=1&catid=5&threadid=170644"> user on a Nintendo forum</a> even collected every Wii game ever released, most of which was shovelware. I am very surprised by how the average stays consistent over this time period, but I guess that is a testament to how popular gaming has become.
+</html>
 </div>
 </div>
 </div>
@@ -13695,8 +13722,9 @@ e7HmIl2M1X2zCtiENZ+BUhlDh2UqpVSO0C4dpZTKEZrwlVIqR2jCV0qpHKEJXymlcoQmfKWUyhGa
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Of course, seeing this visually would be easier. A bar graph would be good to compare the differnt values since the x values are categorical data. The code for creating bar graphs can be seen &lt;a href = "<a href="https://pythonspot.com/matplotlib-bar-chart/"&gt;">https://pythonspot.com/matplotlib-bar-chart/"&gt;</a> here&lt;/a&gt;.</p>
-
+<html>
+Of course, seeing this visually would be easier. A bar graph would be good to compare the differnt values since the x values are categorical data. The code for creating bar graphs can be seen <a href = "https://pythonspot.com/matplotlib-bar-chart/"> here</a>.
+</html>
 </div>
 </div>
 </div>
@@ -14029,8 +14057,9 @@ and the standard deviation is: 751.010855817
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I apologize if this graph is too big; I had to play with the size to make the words on the x-axis not overlap each other. I had trouble configuring the right size parameters, but this seems to work fine. I obtained this information from &lt;a href = "<a href="https://codeyarns.com/2014/10/27/how-to-change-size-of-matplotlib-plot/"&gt;">https://codeyarns.com/2014/10/27/how-to-change-size-of-matplotlib-plot/"&gt;</a> here&lt;/a&gt; if you want to find out for yourself. I think constantly changing it and re-running the code can screw it up, so it might be in the best interest to restarting the Kernel if you are running this in a Jupyter Notebook.</p>
-
+<html>
+I apologize if this graph is too big; I had to play with the size to make the words on the x-axis not overlap each other. I had trouble configuring the right size parameters, but this seems to work fine. I obtained this information from <a href = "https://codeyarns.com/2014/10/27/how-to-change-size-of-matplotlib-plot/"> here</a> if you want to find out for yourself. I think constantly changing it and re-running the code can screw it up, so it might be in the best interest to restarting the Kernel if you are running this in a Jupyter Notebook.
+</html>
 </div>
 </div>
 </div>
@@ -14552,8 +14581,9 @@ Name: 16, dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So GTA V for the PS3 is the highest sold action game on an individual platfrom. Of course, GTA V is well-known to be a multi-platform as well as mult-generational game, so I want to check out how many games in general GTA V has sold. Again, this data is only current as of 10/26/17. GTA V still sells a significant amount of units today (December 15, 2017). According to &lt;a href = "<a href="https://www.forbes.com/sites/erikkain/2017/11/17/npd-october-2017-middle-earth-shadow-of-war-nintendo-switch-top-sales-charts/#463487f725d5"&gt;">https://www.forbes.com/sites/erikkain/2017/11/17/npd-october-2017-middle-earth-shadow-of-war-nintendo-switch-top-sales-charts/#463487f725d5"&gt;</a> this Forbes article&lt;/a&gt;, GTA V was one of the top 20 best selling games of Octobober 2017 and one of the top 10 for the year, despite releasing back in 2013.</p>
-
+<html>
+So GTA V for the PS3 is the highest sold action game on an individual platfrom. Of course, GTA V is well-known to be a multi-platform as well as mult-generational game, so I want to check out how many games in general GTA V has sold. Again, this data is only current as of 10/26/17. GTA V still sells a significant amount of units today (December 15, 2017). According to <a href = "https://www.forbes.com/sites/erikkain/2017/11/17/npd-october-2017-middle-earth-shadow-of-war-nintendo-switch-top-sales-charts/#463487f725d5"> this Forbes article</a>, GTA V was one of the top 20 best selling games of Octobober 2017 and one of the top 10 for the year, despite releasing back in 2013.
+</html>
 </div>
 </div>
 </div>
@@ -14598,8 +14628,9 @@ Name: 16, dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>According to the data, GTA V has collectively sold 56 million copies by October 2016. However, I found &lt;a href = "<a href="http://www.ign.com/articles/2016/11/02/grand-theft-auto-5-has-now-shipped-70-million-units"&gt;">http://www.ign.com/articles/2016/11/02/grand-theft-auto-5-has-now-shipped-70-million-units"&gt;</a> this IGN article&lt;/a&gt; posted on November 2, 2016 where the developers announced they had sold 70 million copies. The difference could be because IGN reported the total number shipped whereas the data I have could be the number sold in stores. Or it could simply be because the website wasn't fully up to date in its collection. Either way, GTA V was an incredibly successful and popular game that sold millions, and it is probably the most popular action game of all time.</p>
-
+<html>
+According to the data, GTA V has collectively sold 56 million copies by October 2016. However, I found <a href = "http://www.ign.com/articles/2016/11/02/grand-theft-auto-5-has-now-shipped-70-million-units"> this IGN article</a> posted on November 2, 2016 where the developers announced they had sold 70 million copies. The difference could be because IGN reported the total number shipped whereas the data I have could be the number sold in stores. Or it could simply be because the website wasn't fully up to date in its collection. Either way, GTA V was an incredibly successful and popular game that sold millions, and it is probably the most popular action game of all time.
+</html>
 </div>
 </div>
 </div>
@@ -15102,9 +15133,13 @@ Sk2AiIhImFITICIiEqbUBIiIiISp/wcQbX0WFVNrdgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3> Machine Learning and Hypothesis Testing </h3><p>Machine learning is about taking your data and using it to make predictions for other datasets. I decided the best way I could use machine learning for this dataset is to predict what the best selling genres nowadays are. What I want to do is use machine learning techniques to evaluate the distribution of games for each genre up to 2015, use this to predict the genre distribution for 2016, and then compare the results to the actual distribution given in the report above. This is known as &lt;a href = "<a href="https://en.wikipedia.org/wiki/Supervised_learning"&gt;">https://en.wikipedia.org/wiki/Supervised_learning"&gt;</a> supervised learning&lt;/a&gt;, where you use training data to predict future data. I will be using numpy's &lt;a href = "<a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.polyfit.html"&gt;">https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.polyfit.html"&gt;</a> polyfit&lt;/a&gt;, which will return a polynomial of best fit that minimizes the least squares error. Furthermore, I will have to perform this for each of the genres separetly and then compare them at the end.</p>
-<p>The followng code will take each genre and give it a hash where the keys are the years and the values are the percentage of games are that genre for the given year.</p>
+<html>
+<h3> Machine Learning and Hypothesis Testing </h3>
+<br/>
+Machine learning is about taking your data and using it to make predictions for other datasets. I decided the best way I could use machine learning for this dataset is to predict what the best selling genres nowadays are. What I want to do is use machine learning techniques to evaluate the distribution of games for each genre up to 2015, use this to predict the genre distribution for 2016, and then compare the results to the actual distribution given in the report above. This is known as <a href = "https://en.wikipedia.org/wiki/Supervised_learning"> supervised learning</a>, where you use training data to predict future data. I will be using numpy's <a href = "https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.polyfit.html"> polyfit</a>, which will return a polynomial of best fit that minimizes the least squares error. Furthermore, I will have to perform this for each of the genres separetly and then compare them at the end. 
 
+The followng code will take each genre and give it a hash where the keys are the years and the values are the percentage of games are that genre for the given year.
+</html>
 </div>
 </div>
 </div>
@@ -15261,7 +15296,7 @@ Sk2AiIhImFITICIiEqbUBIiIiISp/wcQbX0WFVNrdgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="p">{}</span>
@@ -15327,7 +15362,7 @@ Sk2AiIhImFITICIiEqbUBIiIiISp/wcQbX0WFVNrdgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">deg</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
@@ -15380,14 +15415,15 @@ Sk2AiIhImFITICIiEqbUBIiIiISp/wcQbX0WFVNrdgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When you perform &lt;a href = "<a href="https://en.wikipedia.org/wiki/Statistical_hypothesis_testing"&gt;">https://en.wikipedia.org/wiki/Statistical_hypothesis_testing"&gt;</a> hypothesis testing&lt;/a&gt;, you let the null hypothesis be that there is no relationship between your two datasets, while the alternative hypothesis be that there is a realtionship. One way to test for this is to use the correlation $R^2$ score, known as the &lt;a href = "<a href="https://en.wikipedia.org/wiki/Coefficient_of_determination"&gt;">https://en.wikipedia.org/wiki/Coefficient_of_determination"&gt;</a> coefficient of determination&lt;/a&gt;, which is always between 0 and 1. A value of 0 indicates that there is absolutely no relationship, while a value of 1 indiciates an exact one to one correspondence. The closer the value is to 1, the better the relationship. I can use sklearn to identify what my $R^2$ value is:</p>
-
+<html>
+When you perform <a href = "https://en.wikipedia.org/wiki/Statistical_hypothesis_testing"> hypothesis testing</a>, you let the null hypothesis be that there is no relationship between your two datasets, while the alternative hypothesis be that there is a realtionship. One way to test for this is to use the correlation $R^2$ score, known as the <a href = "https://en.wikipedia.org/wiki/Coefficient_of_determination"> coefficient of determination</a>, which is always between 0 and 1. A value of 0 indicates that there is absolutely no relationship, while a value of 1 indiciates an exact one to one correspondence. The closer the value is to 1, the better the relationship. I can use sklearn to identify what my $R^2$ value is:
+</html>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r2</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">pred</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="nb">list</span><span class="p">(</span><span class="n">curr</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
@@ -15406,7 +15442,7 @@ Sk2AiIhImFITICIiEqbUBIiIiISp/wcQbX0WFVNrdgAAAABJRU5ErkJggg==
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.881492427794
+<pre>0.800645485929
 </pre>
 </div>
 </div>
@@ -15430,11 +15466,17 @@ Sk2AiIhImFITICIiEqbUBIiIiISp/wcQbX0WFVNrdgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3> Conclusion </h3><p>So what does this mean? If I were working for a video game company, I would want to understand where the market is headed and how my company to use this information to plan ahead for a better profit. If I was able to use machine learning to accurately predict market trends for the future, I would know that the Shooting genre has become the most popular. Perhaps it would be in my best interest to create a quality First Person Shooter to attract many people. However, it is quite obvious that First Person Shooters are everywhere, especially on Steam, so it would be difficult to make your own game stand out unless you are already a well known AAA developer.</p>
-<p>Instead, using these techniques, you could see that Fighting games have become a lot less popular over the years. You could use other machine learning techniques such as social media discussion or evaluating how big competitve tournaments such as Major League Gaming are becoming. If the interest is becoming large enough for a new, competitive multiplayer game, you could have the ability to create an impressive and popular fighting game.</p>
-<p>With how ginourmous yet oversaturated the video game industry has become, understanding your audience is critical. A small time indie developer is better creating their game for a smaller market since they have a better chance of getting noticed. I know first hand that many indie RPG developers put their games on the PS Vita since that audience is small yet devoted. We saw how big the Wii got and how many shovelware games resulted, so it would be difficult to stand out if no one knew about your game.</p>
-<p>If you were developing a game, and you were trying to figure out for what system to create it and towards whom to market, it would be best to include data about number of consoles sold and attachment rate for similar games. With how saturated the industry is, marketing is key. A proper education in advertising would give you more ideas for how you can use machine learning to predict trends and take advantage of them. I encourage any readers to download the data themselves and perform their own analyses.</p>
+<html>
+<h3> Conclusion </h3>
+<br/>
+So what does this mean? If I were working for a video game company, I would want to understand where the market is headed and how my company to use this information to plan ahead for a better profit. If I was able to use machine learning to accurately predict market trends for the future, I would know that the Shooting genre has become the most popular. Perhaps it would be in my best interest to create a quality First Person Shooter to attract many people. However, it is quite obvious that First Person Shooters are everywhere, especially on Steam, so it would be difficult to make your own game stand out unless you are already a well known AAA developer. 
 
+Instead, using these techniques, you could see that Fighting games have become a lot less popular over the years. You could use other machine learning techniques such as social media discussion or evaluating how big competitve tournaments such as Major League Gaming are becoming. If the interest is becoming large enough for a new, competitive multiplayer game, you could have the ability to create an impressive and popular fighting game. 
+
+With how ginourmous yet oversaturated the video game industry has become, understanding your audience is critical. A small time indie developer is better creating their game for a smaller market since they have a better chance of getting noticed. I know first hand that many indie RPG developers put their games on the PS Vita since that audience is small yet devoted. We saw how big the Wii got and how many shovelware games resulted, so it would be difficult to stand out if no one knew about your game.
+
+If you were developing a game, and you were trying to figure out for what system to create it and towards whom to market, it would be best to include data about number of consoles sold and attachment rate for similar games. With how saturated the industry is, marketing is key. A proper education in advertising would give you more ideas for how you can use machine learning to predict trends and take advantage of them. I encourage any readers to download the data themselves and perform their own analyses.
+</html>
 </div>
 </div>
 </div>
