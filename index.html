@@ -11796,6 +11796,9 @@ div#notebook {
 <br/>
 Video games became wildly popular with arcade machines, but as technology progressed, home consoles were created, too. Before long, they had become a major factor in the electronic entertainment market. Since the 1970s, video games have become more and more popular, and <a href = "https://venturebeat.com/2016/04/21/video-games-will-become-a-99-6b-industry-this-year-as-mobile-overtakes-consoles-and-pcs/"> the global video game market is expected to have a value of over 100 billion USD by 2019</a>. I myself am a big fan of video games, but I also love to learn about their history and how the <a href = "https://en.wikipedia.org/wiki/Video_game_industry"> video game industry</a> operates. 
 
+<br/>
+<br/>
+
 Because video games have become such a huge market, marketing is critical to appeal to the right audience and to understand trends in people's interests in certain types of games. Because sales data is made public, not only can I analyze which games and systems have been most popular, but I can also notice trends into which genres will have a higher appeal in the future or into which companies might not be making as many popular games as they used to. If I were working for a video game company, I could use these data science techniques to help my company understand where the industry is headed and how we might be able to profit off of that. Of course, if that were my full-time job, I would also look at social media data to better grasp what people would like in games nowadays. However, for this project, I am only going to be looking at video game sales data.
 </html>
 </div>
@@ -12024,7 +12027,12 @@ I immeadiately observe a few things from just these 5 data points:
 <html>
     <h3> Tidying the Data </h3>
 
+<br/>
+
 Thankfully the person who scraped the data from the website did a great job to make sure that this data is already quite tidy and readily available for analysis. However, I still want to perform my own check to tidy the data to a form that I prefer. First, I want to create individual lists of all platforms, genres, and years to get a better understanding of what data I have and what needs to be fixed. For better readability, I will also sort these lists. 
+
+<br/>
+<br/>
 
 To access each row of a Pandas DataFrame, you the <a href = "https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.iterrows.html"> iterrows()</a> function, which returns an iterrable of each row. Each row is a tuple of the index and the series containg the rest of the information, which you can access with row[1]. A Pandas <a href = "https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html"> Series</a> is an array-like data structure that has specific values for each column in the DataFrame. You can see the following code on how to access data from a DataFrame. The append() function is a list function to place the given value at the end of a list (i.e., if you're list = [5,2], and you call append(-4), you get [5,2,-4]).
 </html>
@@ -12145,6 +12153,8 @@ There are 31 platforms in this list, and I will refer to them by their abbreavia
    <li> PCFX - <a href = "https://en.wikipedia.org/wiki/PC-FX"> PC-FX </a> </li>
    <li> 3DO - <a href = "https://en.wikipedia.org/wiki/3DO_Interactive_Multiplayer"> 3DO Interactive Multiplayer </a> </li>
 </ul>
+
+<br/>
 
 Some of the latter ones I actually didn't know about and had to look up, as they were mainly only successful in Japan and only have a handful of games in the dataset. I also linked to the Wikipedia articles for these lesser known consoles if you want to read more; they're pretty interesting to learn about. The 3DO was apparently <a href = "http://content.time.com/time/magazine/article/0,9171,1125840,00.html"> TIME Magazine's 1993 Product of the Year</a>, and the TG16, which was known internationally (and also much more successful internationally) as the PC Engine, was succeeded by the PCFX, which was later discontinued.
 
@@ -15471,14 +15481,36 @@ When you perform <a href = "https://en.wikipedia.org/wiki/Statistical_hypothesis
 <br/>
 So what does this mean? If I were working for a video game company, I would want to understand where the market is headed and how my company to use this information to plan ahead for a better profit. If I was able to use machine learning to accurately predict market trends for the future, I would know that the Shooting genre has become the most popular. Perhaps it would be in my best interest to create a quality First Person Shooter to attract many people. However, it is quite obvious that First Person Shooters are everywhere, especially on Steam, so it would be difficult to make your own game stand out unless you are already a well known AAA developer. 
 
+<br/>
+<br/>
+
 Instead, using these techniques, you could see that Fighting games have become a lot less popular over the years. You could use other machine learning techniques such as social media discussion or evaluating how big competitve tournaments such as Major League Gaming are becoming. If the interest is becoming large enough for a new, competitive multiplayer game, you could have the ability to create an impressive and popular fighting game. 
 
+<br/>
+<br/>
+
 With how ginourmous yet oversaturated the video game industry has become, understanding your audience is critical. A small time indie developer is better creating their game for a smaller market since they have a better chance of getting noticed. I know first hand that many indie RPG developers put their games on the PS Vita since that audience is small yet devoted. We saw how big the Wii got and how many shovelware games resulted, so it would be difficult to stand out if no one knew about your game.
+
+<br/>
+<br/>
 
 If you were developing a game, and you were trying to figure out for what system to create it and towards whom to market, it would be best to include data about number of consoles sold and attachment rate for similar games. With how saturated the industry is, marketing is key. A proper education in advertising would give you more ideas for how you can use machine learning to predict trends and take advantage of them. I encourage any readers to download the data themselves and perform their own analyses.
 </html>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
